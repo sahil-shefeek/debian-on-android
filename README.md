@@ -1,32 +1,23 @@
-debian-on-termux
-================
+# debmux
 
-what is it
-----------
+![Header Image](https://www.debian.org/logos/openlogo-nd-100.png)
 
-- a shell script to install [Debian](https://www.debian.org) via [debootstrap](https://wiki.debian.org/Debootstrap) in a [Termux](https://wiki.termux.com/wiki/Main_Page) environment
-- supported Debian versions also include: [Debian testing (bullseye)](https://www.debian.org/releases/testing/), [Debian unstable (sid)](https://www.debian.org/releases/sid/)
-- supported architectures include: armel, armhf, arm64, i386, amd64
-- no root permissions are required
 
-how to use it
--------------
+![GitHub Issues](https://img.shields.io/github/issues/sahil-shefeek/debian-on-android)
 
-- install [Termux](https://termux.com/)
-- optionally modify the configuration lines near the top of the script
-- download `debian_on_termux_10.sh` (or `debian_on_termux.sh` if using an Android version before 10) and run it;
 
-        wget -q https://raw.githubusercontent.com/sp4rkie/debian-on-termux/master/debian_on_termux_10.sh && sh debian_on_termux_10.sh
+## What is it
 
-- Debian will be installed only if it is not already.
-- you will be proot-ed to Debian, type exit to return to termux.
+- A shell script to install [Debian 12 ("bookworm")](https://www.debian.org/releases/bookworm/) - the current "stable" release and [Debian 11 ("bullseye")](https://www.debian.org/releases/bullseye/) - the current "oldstable" release via [debootstrap](https://wiki.debian.org/Debootstrap) in a [Termux](https://wiki.termux.com/wiki/Main_Page) environment.
+- Supported architectures include: armel, armhf, arm64, i386, amd64.
+- **Note:** Android 10 and below is no longer maintained and may break.
 
-reference
-----------
+## How to Use It
 
-[termux wiki](https://wiki.termux.com/wiki/Debian)
+- Install [Termux](https://termux.com/).
+- Optionally modify the configuration lines near the top of the script.
+- Download `debmux.sh` for Android 10+ devices and run it:
 
-Issues
--------
-Without a pull request are not likely to be addressed. v
+  ```sh
+  wget -q https://raw.githubusercontent.com/sahil-shefeek/debian-on-android/master/debmux.sh && chmod +x debmux.sh && sh debmux.sh
 
