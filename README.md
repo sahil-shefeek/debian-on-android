@@ -21,14 +21,6 @@ how to use it
 - Debian will be installed only if it is not already.
 - you will be proot-ed to Debian, type exit to return to termux.
 
-
-alternatives
-------------
-
-- [Fedora](https://github.com/nmilosev/termux-fedora)
-- [Arch](https://github.com/sdrausty/termux-archlinux)
-- [Ubuntu](https://github.com/Neo-Oli/termux-ubuntu)
-
 reference
 ----------
 
@@ -36,5 +28,5 @@ reference
 
 Issues
 -------
-Without a pull request are not likely to be addressed. 
+Without a pull request are not likely to be addressed. v
 
