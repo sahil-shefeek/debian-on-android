@@ -31,6 +31,20 @@ if [ ! -d ~/debian-$BRANCH ] ; then
 		~/debian-$BRANCH \
 		$REPO
 fi
+
+#Alias for easy launch
+if [ -n "$BASH_VERSION" ]; then
+    echo 'alias start-deb="sh debmux.sh"' >> "$HOME/.bashrc"
+    echo "Alias 'start-deb' for bash has been added. You can run debian by using 'start-deb'."
+elif [ -n "$ZSH_VERSION" ]; then
+    echo 'alias start-deb="sh debmux.sh"' >> "$HOME/.zshrc"
+    echo "Alias 'start-deb' for zsh has been added. You can run debian by using 'start-deb'."
+else
+    echo "Unsupported shell. Please add the alias manually for your shell or use sh debmux.sh to run debian."
+fi
+
+echo "Logging you in..."
+
 unset LD_PRELOAD
 proot \
 	-0 \
