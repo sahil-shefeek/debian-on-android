@@ -18,6 +18,17 @@
 - Optionally modify the configuration lines near the top of the script.
 - Download `debmux.sh` for Android 10+ devices and run it:
 
-  ```sh
+  ```shell
   wget -q https://raw.githubusercontent.com/sahil-shefeek/debian-on-android/master/debmux.sh && chmod +x debmux.sh && sh debmux.sh
+
+# Alternative Method
+### using PRoot Distro
+
+[PRoot Distro](https://github.com/termux/proot-distro) is a Bash script wrapper for the utility `proot` designed for easy management of chroot-based Linux distribution installations. It does not require root or any special ROM, kernel, etc. Everything you need to get started is the latest version of the Termux application. See [Installing PRoot](https://github.com/termux/proot-distro#installing) for details.
+
+**Important Note:** PRoot Distro is not a virtual machine or a traditional chroot. It shares the same kernel as your Android system, so updating it through the package manager won't work.
+
+This script should never be run as the root user. If you do so, file permissions and SELinux labels could get messed up, and there's a possibility of damaging the system if executed as root. For safety, PRoot Distro checks the user ID before running and refuses to work if it detects a user ID of 0 (root).
+
+To know more visit [PRoot](https://github.com/termux/proot-distro).
 
